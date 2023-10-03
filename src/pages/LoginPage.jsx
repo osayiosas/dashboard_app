@@ -155,7 +155,7 @@ const LoginPage = () => {
                   fontWeight="bold"
                   sx={{ "& > a": { color: colors.red[900], ml: "5px" } }}
                 >
-                  Don't have account -<Link to="#">Regisster now</Link>
+                  Don't have account -<Link to="#">Register now</Link>
                 </Typography>
               </Box>
 
