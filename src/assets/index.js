@@ -3,7 +3,7 @@ export const images = {
   summaryImages: {
     totalBook: require("./images/perspective_matte-385-128x128.png"),
     sold: require("./images/x.png"),
-    cancel: require("./images/dashborad.png"),
+    cancel: require("./images/shopping-cart.png"),
   },
   userProfile: require("./images/7309681.jpeg"),
   bookingImage: require("./images/bloosme.png"),

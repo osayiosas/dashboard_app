@@ -1,11 +1,10 @@
+import React from "react";
 
-import React from 'react'
+import { images } from "../../assets";
 
-import {images} from "../../assets"
-
-import { Grid, Stack, Typography, colors } from '@mui/material';
-import Animate from "./Animate"
-import MPaper from './MPaper';
+import { Box, Grid, Stack, Typography, colors } from "@mui/material";
+import Animate from "./Animate";
+import MPaper from "./MPaper";
 
 const summaryData = [
   {
@@ -16,12 +15,12 @@ const summaryData = [
   {
     title: "Sold",
     value: "281k",
-    image: images.summaryImages.sold,
+    image: images.summaryImages.cancel,
   },
   {
     title: "Canceled",
     value: "81k",
-    image: images.summaryImages.cancel,
+    image: images.summaryImages.sold,
   },
 ];
 
@@ -38,9 +37,25 @@ const SummaryGrid = () => {
                 justifyContent="space-between"
               >
                 <Stack spacing={1}>
-                  <Typography variant='h4' fontWeight="bold">{summary.value}</Typography>
-                  <Typography variant='body2' fontWeight="bold" color={colors.grey[600]}>{summary.title}</Typography>
+                  <Typography variant="h4" fontWeight="bold">
+                    {summary.value}
+                  </Typography>
+                  <Typography
+                    variant="body2"
+                    fontWeight="bold"
+                    color={colors.grey[600]}
+                  >
+                    {summary.title}
+                  </Typography>
                 </Stack>
+                <Box
+                  sx={{
+                    height: "100px",
+                    width: "100px",
+                    "& img": { width: "100%" },
+                  }}>
+                    <img src={summary.image}  alt="summry"/>
+                  </Box>
               </Stack>
             </MPaper>
           </Animate>
@@ -48,6 +63,6 @@ const SummaryGrid = () => {
       ))}
     </Grid>
   );
-}
+};
 
-export default SummaryGrid
+export default SummaryGrid;
